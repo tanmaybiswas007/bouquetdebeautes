@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101018">
+  <meta name="description" content="Find my channels, scan QR codes, and explore my image gallery.">
+  <title>My Corner of the Internet</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="wordmark" href="#" aria-label="Home"><span class="mark">✦</span> MY SPACE</a>
+    <a class="top-link" href="#links">Find me online <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="live-dot"></span> YOUR DIGITAL HOME</div>
+      <h1>One place.<br><span>Everything you love.</span></h1>
+      <p class="intro">Follow my channels, scan a QR code, and explore the gallery. Welcome to my little corner of the internet.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#links">Explore my links <span>↓</span></a>
+        <a class="button button-quiet" href="#gallery">View gallery <span>↗</span></a>
+      </div>
+      <div class="hero-note"><span class="note-line"></span> CONNECT · DISCOVER · SHARE</div>
+    </section>
+
+    <section id="links" class="section">
+      <div class="section-heading">
+        <div><div class="kicker">STAY CONNECTED</div><h2>Find me online</h2></div>
+        <p>Choose a platform or scan its QR code.</p>
+      </div>
+      <div class="link-grid">
+        <article class="platform-card facebook-card">
+          <div class="platform-top"><div class="platform-icon facebook-icon">▶</div><span class="card-index">01 / VIDEO</span></div>
+          <h3>facebook</h3>
+          <p>Videos, updates, and new uploads.</p>
+          <div class="qr-wrap"><div id="facebook-qr" class="qr-code" aria-label="facebook QR code"></div><span>SCAN TO OPEN</span></div>
+          <a id="facebook-link" class="card-link" href="https://facebook.com/" target="_blank" rel="noopener noreferrer">Visit channel <span>↗</span></a>
+        </article>
+        <article class="platform-card telegram-card">
+          <div class="platform-top"><div class="platform-icon telegram-icon">➤</div><span class="card-index">02 / COMMUNITY</span></div>
+          <h3>Telegram</h3>
+          <p>Join the channel and stay in the loop.</p>
+          <div class="qr-wrap"><div id="telegram-qr" class="qr-code" aria-label="Telegram QR code"></div><span>SCAN TO JOIN</span></div>
+          <a id="telegram-link" class="card-link" href="https://t.me/+94vpkvWl29U1Nzll" target="_blank" rel="noopener noreferrer">Open Telegram <span>↗</span></a>
+        </article>
+      </div>
+      <p class="small-hint">The links above are starter examples. Replace them with your real channel URLs in <code>script.js</code>.</p>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+      <div class="section-heading">
+        <div><div class="kicker">A VISUAL JOURNAL</div><h2>Image gallery</h2></div>
+        <p>A curated place for your photos, artwork, and moments.</p>
+      </div>
+      <div class="gallery-toolbar">
+        <div class="gallery-label"><span class="gallery-spark">✦</span> THE COLLECTION <span id="image-count" class="count-pill">0 IMAGES</span></div>
+        <label class="button button-primary upload-button" for="image-upload">＋ Add photos</label>
+        <input id="image-upload" type="file" accept="image/*" multiple hidden>
+      </div>
+      <div id="gallery-grid" class="gallery-grid">
+        <div class="gallery-empty"><div class="empty-icon">▧</div><h3>Your gallery starts here</h3><p>Add photos to preview them, or place image files in the <code>images</code> folder and list them in <code>script.js</code>.</p></div>
+      </div>
+      <p class="small-hint"><strong>Important:</strong> photos added with this button are previews on this device only. To publish images for everyone, upload them to the website's <code>images</code> folder and redeploy, or connect a permanent image-hosting service.</p>
+    </section>
+
+    <section class="closing-card">
+      <div class="closing-star">✦</div>
+      <div><div class="kicker">THANKS FOR STOPPING BY</div><h2>Let's stay connected.</h2><p>Save this page and share it with someone who should find you.</p></div>
+      <button id="share-button" class="button button-light" type="button">Share this page <span>↗</span></button>
+    </section>
+  </main>
+
+  <footer><a class="wordmark" href="#"><span class="mark">✦</span> MY SPACE</a><span>Made to bring everything together.</span><a href="#top" id="back-top">BACK TO TOP ↑</a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
